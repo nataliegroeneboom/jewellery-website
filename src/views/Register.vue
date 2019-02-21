@@ -1,13 +1,24 @@
 <template>
-    <div class="register">
-        <h1>Register</h1>
+    <v-layout>
+        <v-flex xs5 offset-xs3>
+            <div class="white elevation-2">
+                <v-toolbar flat dense class="cyan" dark>
+                    <v-toolbar-title>Register</v-toolbar-title>
+                </v-toolbar>
+            </div>
+   <div class="register pl-4 pr-4 pt-2 pb-2">
+ 
         <input type="email" name="email" placeholder="email" v-model="email">
         <br />
         <input type="password" name="password" placeholder="password" v-model="password">
         <br />
         <div class="error" v-html="error"></div>
-        <button @click="register">Register</button>
+        <v-btn @click="register">Register</v-btn>
     </div>
+         </v-flex>   
+
+    </v-layout>
+   
 </template>
 
 <script>

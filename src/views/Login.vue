@@ -7,7 +7,7 @@
                     <v-toolbar-title>Register</v-toolbar-title>
                 </v-toolbar>
             </div>
-   <div class="register pl-4 pr-4 pt-2 pb-2">
+   <div class="login pl-4 pr-4 pt-2 pb-2">
          <v-text-field
             label="Email"
             placeholder="email"
@@ -20,7 +20,7 @@
           ></v-text-field>
     
         <div class="error" v-html="error"></div>
-        <v-btn @click="register">Register</v-btn>
+        <v-btn @click="login">Login</v-btn>
     </div>
          </v-flex>   
 
@@ -39,9 +39,9 @@ export default {
         }
     },
     methods: {
-       async register(){
+       async login(){
            try{
-                await AuthenticationService.register({
+                await AuthenticationService.login({
                email: this.email,
                password: this.password 
             })
@@ -63,5 +63,3 @@ export default {
     }
 
 </style>
-
-
